@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Formación Profesional</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- MATERIAL DESINg-->
+
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+
+<body>
+    <main>
+        
+            <header class="cabecera">
+                <picture style="margin: 10px;">
+                    <source media="(min-width: 500px)" srcset="imagenes/Logo.png">
+                    <img id="imagenTitulo" src="imagenes/Logop.png" alt="Logo CIFP">
+                </picture>
+                <h1 id="titulo">Dispositivos IOT</h1>
+
+            </header>
+
+
+            <article class="menu">
+                <ul>
+                     
+                    <li>
+                         <input type="button" id="grabarRegistro" value="Grabar datos" />
+                    </li>
+                    <li>
+                      <a href="http://www.informaticasc.com/daw_2122/CiudadI/php/PatriciaSualdea/pdf/ListadoElementosUrbanos.php">Pdf</a>
+                    </li>
+                    <li>
+                      <input type="button" id="primero" value="Ir al primero" />
+                    </li>
+                    <li>
+                      <input type="button" id="ultimo" value="Ir al ultimo" />
+                    </li>
+                    <li>
+                      <input type="button" id="siguiente" value="Siguiente" />
+                    </li>
+                    <li>
+                      <input type="button" id="anterior" value="Anterior" />
+                    </li>
+                    <li>
+                      <input type="button" id="borrar" value="borrar" />
+                    </li>
+                    <li>
+                      <input type="button" id="modificar" value="modificar" />
+                    </li>   
+                   
+                             
+                </ul>
+            </article>
+
+
+            <article aria-label="Datos elemento" class="datosdelejercicio">
+                <header>
+                    <h3>
+                        Datos elemento
+                    </h3>
+                </header>
+                <fieldset>
+                    <div class="container">
+                        <form action="/action_page.php" id="form">
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="cId">Id</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="cId" name="cId" placeholder="Números de 0-9" style="width:100px">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="cTipo">Tipo</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="cTipo" name="cTipo" placeholder="Temperatura, Luminosidad, Caudal, Viento, Contaminacion(CO2), Posicion GPS" style="width:300px" maxlength="50">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="c">Cantidad</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="cCantidad" name="cCantidad" placeholder="Números de 0-9" style="width:500px" maxlength="150">
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="cHora">Hora</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="cHora" name="cHora" placeholder="hh:mm" style="width:200px">
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="cFecha">Fecha</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="cFecha" name="cFecha" placeholder="dd-mm-yyyy" style="width:100px">
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="cLatitud">Latitud</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="cLatitud" name="cLatitud" placeholder="0-9," style="width:220px">
+                            </div>
+                            
+                          </div>
+
+
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="cLongitud">Longitud</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="cLongitud" name="cLongitud" placeholder="-0-9," style="width:220px">
+                            </div>
+                          </div>
+     
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="cDireccion">Direccion</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="cDireccion" name="cDireccion" placeholder="150 Caractedres de a-zAZ0-9áéíóú" style="width:100px">
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="cDescripcion">Descripcion</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="cDescripcion" name="cDescripcion" placeholder="300 Caractedres de a-zAZ0-9áéíóú" style="width:100px">
+                            </div>
+                          </div>
+
+                          
+                        </form>
+                    </div>
+                    
+                </fieldset>
+                <table id="tabla">
+                  <thead id="cabecera"></thead>
+                  <tbody id="cuerpo"></tbody>
+
+                </table>
+            </article>
+
+
+
+             
+            <article class="cajamapa">
+                <header>
+                    <h3>
+                        Mapa
+                    </h3>
+                </header>
+                <div class="map_canvas" id="map_canvas">
+                </div>
+                <h5 id="direccionMapa">
+                </h5>
+            </article>
+
+
+            <footer class="pie">
+
+               
+                <p>Desarrollo de Aplicaciones Web(<cite>DAW</cite>) &copy; CIFP Santa Catalina</p>
+                <p>Patricia Sualdea</p>
+            </footer>
+
+    
+
+    </main>
+
+</body>
+
+<script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeNRBEIWYeWRRvY8On_9pkSD1_J_zLykQ&libraries=geometry">
+</script>
+</script>
+<script src="./js/funciones.js"></script>
+<script src="./js/datos.js"></script>
+<script src="./js/bd.js"></script>
+ 
+
+
+</html>
